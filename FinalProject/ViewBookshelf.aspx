@@ -40,8 +40,8 @@
             </div>
         </div>
         </div>
-         </div>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IsbnTitleString %>" SelectCommand="SELECT [Title], [AuthorFName], [AuthorLName], [Category], [Rating] FROM [Table]">
+    </div>
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IsbnTitleString %>" SelectCommand="SELECT [Title], [AuthorFName], [AuthorLName], [Category], [Rating] FROM [Table] ORDER BY [Title]">
 </asp:SqlDataSource>        
     </form>
 </body>
