@@ -49,13 +49,13 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.DropDownList dropDownEditSearch;
         
         /// <summary>
-        /// textEditSearch control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textEditSearch;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
         /// lblEditTitle control.
@@ -175,15 +175,6 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.Label lblEditRating;
         
         /// <summary>
-        /// lblEditRatingOptional control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEditRatingOptional;
-        
-        /// <summary>
         /// DropDownQuestNum control.
         /// </summary>
         /// <remarks>
@@ -220,6 +211,24 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.TextBox textEditIsbn;
         
         /// <summary>
+        /// lbl_format control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_format;
+        
+        /// <summary>
+        /// rblst_format control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblst_format;
+        
+        /// <summary>
         /// btnEditSubmit control.
         /// </summary>
         /// <remarks>
@@ -227,5 +236,23 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEditSubmit;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// lbl_result control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_result;
     }
 }

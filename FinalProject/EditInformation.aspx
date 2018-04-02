@@ -25,23 +25,22 @@
         ?Category? Once the search is completed, it will autofill the information for the other
         textboxes and the user can edit the information from there. -->
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <b><asp:Label ID="lblEditSearch" runat="server" Text="Search: "></asp:Label></b>
+                <b><asp:Label ID="lblEditSearch" runat="server" Text="Book To Edit: "></asp:Label></b>
             </div>
             <div class="form-group">
                 <div class="col-md-2 col-sm-12 col-xs-12">
-                    <asp:DropDownList ID="dropDownEditSearch" runat="server" CssClass="form-control">
+                    <asp:DropDownList ID="dropDownEditSearch" runat="server" CssClass="form-control" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Title" DataValueField="Isbn" OnSelectedIndexChanged="dropDownEditSearch_SelectedIndexChanged" Width="300px">
                         <asp:ListItem Value="ISBN"></asp:ListItem>
                         <asp:ListItem Value="Title"></asp:ListItem>    
                         <asp:ListItem Value="Author's Last Name"></asp:ListItem>    
                     </asp:DropDownList>                                    
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IsbnTitleString %>" SelectCommand="SELECT [Isbn], [Title] FROM [Table]"></asp:SqlDataSource>
+                    <h3 style="font-weight: bold; width: 100%;">Please Enter Your Values Below:</h3>
                 </div>
-                <div class="col-md-10">
-                    <asp:TextBox ID="textEditSearch" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>    
                 <br />  
-                <br />   
+                <br />
             </div>             
-        <div class="form-group">
+        <div style="clear: both;" class="form-group">
             <div class="col-md-12">
                 <b><asp:Label ID="lblEditTitle" runat="server" Text="Title: "></asp:Label></b>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
@@ -105,22 +104,20 @@
             <div class="form-group">
                 <div class="col-md-12">
                     <b><asp:Label ID="lblEditRating" runat="server" Text="Rating: "></asp:Label></b>
-                    <asp:Label ID="lblEditRatingOptional" runat="server" Text="(optional)"></asp:Label>
                 </div>
                 <div class="col-md-12">
                     <asp:DropDownList ID="DropDownQuestNum" runat="server" CssClass="form-control">
-                        <asp:ListItem Value="N/A"></asp:ListItem>
                         <asp:ListItem Value="0"></asp:ListItem>
                         <asp:ListItem Value="0.5"></asp:ListItem>
-                        <asp:ListItem Value="1.0"></asp:ListItem>
+                        <asp:ListItem Value="1"></asp:ListItem>
                         <asp:ListItem Value="1.5"></asp:ListItem>
-                        <asp:ListItem Value="2.0"></asp:ListItem>
+                        <asp:ListItem Value="2"></asp:ListItem>
                         <asp:ListItem Value="2.5"></asp:ListItem>
-                        <asp:ListItem Value="3.0"></asp:ListItem>
+                        <asp:ListItem Value="3"></asp:ListItem>
                         <asp:ListItem Value="3.5"></asp:ListItem>
-                        <asp:ListItem Value="4.0"></asp:ListItem>
+                        <asp:ListItem Value="4"></asp:ListItem>
                         <asp:ListItem Value="4.5"></asp:ListItem>
-                        <asp:ListItem Value="5.0"></asp:ListItem>
+                        <asp:ListItem Value="5"></asp:ListItem>
                     </asp:DropDownList>
                 </div>
             </div>
@@ -136,8 +133,28 @@
                 </div>
             </div>
             <br />
+            <div class="form-group">
+                <div class="col-md-12">
+                    <b><asp:Label style="text-decoration: underline;" ID="lbl_format" runat="server" Text="Book Format:"></asp:Label></b>
+                    <asp:RadioButtonList ID="rblst_format" runat="server">
+                        <asp:ListItem Selected="True">Paperback</asp:ListItem>
+                        <asp:ListItem>Hardback</asp:ListItem>
+                        <asp:ListItem>Ebook</asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+            </div>
+        <br />
             <div class="col-md-12">
                 <asp:Button ID="btnEditSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnEditSubmit_Click"/>
+                <asp:Button ID="Button1" runat="server" Text="Clear" CssClass="btn btn-primary" style="background-color: red; margin-left: 2%;" OnClick="Button1_Click" />
+            </div>
+            <br />
+        <div class="col-md-12">
+            <asp:Label style="color: green; font-weight: bold;" ID="lbl_result" runat="server"></asp:Label>
+            </div>
+            <br />
+        <div class="col-md-12">
+            <h4><a href="OptionsMenu.aspx" title="Home">Back to Options</a></h4>
             </div>
             <br />
     </div>

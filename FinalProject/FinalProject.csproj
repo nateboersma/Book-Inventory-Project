@@ -109,6 +109,17 @@
     <Content Include="Remove.aspx" />
     <Content Include="scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="scripts\jquery-3.3.1.min.map" />
+    <Content Include="BookInventory.xsc">
+      <DependentUpon>BookInventory.xsd</DependentUpon>
+    </Content>
+    <None Include="BookInventory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookInventory1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="BookInventory.xss">
+      <DependentUpon>BookInventory.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -148,6 +159,11 @@
     </Compile>
     <Compile Include="Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookInventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookInventory.xsd</DependentUpon>
     </Compile>
     <Compile Include="CurrentReadingList.aspx.cs">
       <DependentUpon>CurrentReadingList.aspx</DependentUpon>
